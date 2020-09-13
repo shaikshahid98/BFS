@@ -1,1 +1,1 @@
-# Graph_Traversal_Visualization
+# Graph_Traversal_Visualization_BFS
