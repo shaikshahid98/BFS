@@ -76,6 +76,7 @@ function Cell(i,j)
     fill(255, 255, 102);
     rect(x,y,w,w);
   }
+//   Select any one of the unexplored neighbour from all 4 and save the other to the stack to revisit again them
   this.nkb= function()
   {
     
@@ -83,6 +84,7 @@ function Cell(i,j)
     var right= grid[ind(i+1,j)];
     var bot= grid[ind(i,j+1)];
     var left= grid[ind(i-1,j)];
+//     If the cell is not visited and unexplored
     if(bot && !bot.visited && !bot.pushed)
     { nvis.push(bot);bot.pushed=1;}
     if(left && !left.visited && !left.pushed)
@@ -98,6 +100,7 @@ function Cell(i,j)
     }
     else
     {
+//       if all the cells are visited and are empty return null
         return undefined;
     }
   }
