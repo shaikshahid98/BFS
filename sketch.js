@@ -3,6 +3,7 @@ var w=20;
 var grid=[];
 var nvis=[];
 var current;
+// Created a setup for the displayed of grid.
 function setup() {
   
   createCanvas(1000,1000);
@@ -21,6 +22,7 @@ function setup() {
   current=c1;
 }
 
+// Created a new function for the grid manipulation and also for current cell
 function draw() {
   background(255,255,255);
   for(var i=0;i<grid.length;i++){
@@ -35,6 +37,7 @@ function draw() {
     current=next;
   }
 }
+// created a function for removsl of the walls of cells if selected 
 function removewall(a,b)
 {
   var x= b.i-a.i;
@@ -58,6 +61,7 @@ function ind(i,j)
   if(i<0 || j<0 || i > col-1 || j > row-1){ return -1;}
   return j + (i) * col;
 }
+// Created a cell function for selecting the next from all four cells from the given cells
 function Cell(i,j)
 {
   this.i=i;
